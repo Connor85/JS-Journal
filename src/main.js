@@ -1,4 +1,5 @@
 import {Entry} from './journal-logic.js';
+import './styles.css';
 
 $(document).ready(function(){
     $("#entry-form").submit(function(event){
