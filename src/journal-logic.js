@@ -5,6 +5,27 @@ export function Entry(title, body) {
         var bodyArr = this.body.split(" ");
         return bodyArr.length;
     }
+
+    this.vowelCount = function(){
+        var vowels = ["a", "e", "i", "o", "u"];
+        var splitBody = [];
+        splitBody = this.body.split();
+        var totalVowels = 0;
+        
+        splitBody.forEach(function (word){  
+
+            for(var i = 0; i < word.length; i++ ){
+                vowels.forEach(function (vowel) {
+                    if (word[i].includes(vowel)){
+                        totalVowels += 1;
+                     }     
+                });
+            }
+        });
+
+        return totalVowels;
+
+    }
 }
 
 // another way to return wordCount if the function is not in the constructor
