@@ -26,6 +26,21 @@ export function Entry(title, body) {
         return totalVowels;
 
     }
+    this.getTeaser = function(){
+        var splitSentence = [];
+        splitSentence = this.body.split('.');
+        var splitWord = splitSentence[0].split(' ');
+        var returnSentence = [];
+        if(splitWord.length > 8){
+            for(var i =0; i<8; i++){
+                returnSentence.push(splitWord[i]);
+            }
+         } 
+        else{
+                returnSentence;
+            }
+        return returnSentence.join(' ');
+    }
 }
 
 // another way to return wordCount if the function is not in the constructor

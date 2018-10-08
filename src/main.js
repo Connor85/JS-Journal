@@ -8,7 +8,9 @@ $(document).ready(function(){
         var newEntry = new Entry(title, body);
         var result = newEntry.wordCount();
         var vowels = newEntry.vowelCount();
+        var teaser = newEntry.getTeaser();
+        $('#teaser').text(teaser);
         $('#word-count').text("The body containts " + result +" words.");
-        $('#vowel-count').text("The body containts " + result +" vowels.");
+        $('#vowel-count').text("The body containts " + vowels +" vowels.");
     });
 });
